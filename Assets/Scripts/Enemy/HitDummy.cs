@@ -6,8 +6,9 @@ public class HitDummy : MonoBehaviour
     [SerializeField] private GameObject damagePopupPrefab;
 
 public void TakeHit(int damage)
-    {
-        GameObject popup = Instantiate(damagePopupPrefab, transform.position, Quaternion.identity);
-        popup.GetComponent<DamagePopup>().SetDamageText(damage);
-    }
+{
+    GameObject popup = Instantiate(damagePopupPrefab, transform.position, Quaternion.identity);
+    popup.GetComponent<DamagePopup>().SetDamageText(damage);
+    GetComponent<Health>().TakeDamage(damage);
+}
 }
