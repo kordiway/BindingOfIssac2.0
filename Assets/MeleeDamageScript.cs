@@ -6,7 +6,7 @@ public class MeleeDamageScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("HitDummy"))
+        if (other.gameObject.CompareTag("Enemy"))
         {
             other.gameObject.GetComponent<HitDummy>().TakeHit(damage);
         }
