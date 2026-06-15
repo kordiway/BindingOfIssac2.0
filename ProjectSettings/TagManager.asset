@@ -5,14 +5,16 @@ TagManager:
   serializedVersion: 3
   tags:
   - HitDummy
+  - 'Player '
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
-  - 
+  - Wall
   - 
   - 
   - 

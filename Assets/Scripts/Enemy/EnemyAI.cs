@@ -10,7 +10,8 @@ public class EnemyAI : MonoBehaviour
 
     [SerializeField] private float speed = 3f;
     [SerializeField] private float detectionRange = 10f;
-    
+    [SerializeField] private float loseTrackTime = 5f;
+    private float loseTrackTimer;
     private Rigidbody2D rb;
     private Transform player;
     private EnemyState currentState = EnemyState.Idle;
@@ -27,35 +28,46 @@ public class EnemyAI : MonoBehaviour
     {
         switch (currentState)
         {
-        case EnemyState.Idle:
-            CheckLineOfSight();
-            break;
-        case EnemyState.Aggro:
-            CheckLineOfSight();
-            MoveTowardPlayer();
-            break;
+            case EnemyState.Idle:
+                CheckLineOfSight();
+                break;
+            case EnemyState.Aggro:
+                CheckLineOfSight();
+                MoveTowardPlayer();
+                break;
         }
     }
 
-void CheckLineOfSight()
+    void CheckLineOfSight()
+    {
+        Vector2 directionToPlayer = (player.position - transform.position).normalized;
+        int layerMask = ~LayerMask.GetMask("Enemy");
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, directionToPlayer, detectionRange, layerMask);
+
+        if (hit.collider != null && hit.collider.CompareTag("Player"))
+        {
+            currentState = EnemyState.Aggro;
+            loseTrackTimer = loseTrackTime;
+        }
+        else if (currentState == EnemyState.Aggro)
+        {
+            loseTrackTimer -= Time.deltaTime;
+            if (loseTrackTimer <= 0)
+            {
+                currentState = EnemyState.Idle;
+            }
+        }
+    }
+
+ void MoveTowardPlayer()
 {
     Vector2 directionToPlayer = (player.position - transform.position).normalized;
-    int layerMask = ~LayerMask.GetMask("Enemy");
-    RaycastHit2D hit = Physics2D.Raycast(transform.position, directionToPlayer, detectionRange, layerMask);
-
-    if (hit.collider != null && hit.collider.CompareTag("Player"))
+    
+    RaycastHit2D wallCheck = Physics2D.Raycast(transform.position, directionToPlayer, 0.5f, LayerMask.GetMask("Wall"));
+    
+    if (wallCheck.collider == null)
     {
-        currentState = EnemyState.Aggro;
+        rb.MovePosition(rb.position + directionToPlayer * speed * Time.fixedDeltaTime);
     }
-    else
-    {
-        currentState = EnemyState.Idle;
-    }
-}
-
-void MoveTowardPlayer()
-{
-    Vector2 directionToPlayer = (player.position - transform.position).normalized;
-    rb.MovePosition(rb.position + directionToPlayer * speed * Time.fixedDeltaTime);
 }
 }

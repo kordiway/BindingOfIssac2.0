@@ -127,9 +127,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2099132101884451141, guid: f24643effa5e841f68a4823663e3bfb9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3032165271616365193, guid: f24643effa5e841f68a4823663e3bfb9, type: 3}
       propertyPath: m_Name
       value: EmptyRoomBlueprint(1 Open Long + Short Side) (First Variant)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032165271616365193, guid: f24643effa5e841f68a4823663e3bfb9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3932795818572806835, guid: f24643effa5e841f68a4823663e3bfb9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -171,6 +179,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 4898457824666156039, guid: f24643effa5e841f68a4823663e3bfb9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5035222962791725764, guid: f24643effa5e841f68a4823663e3bfb9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624159547026693034, guid: f24643effa5e841f68a4823663e3bfb9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748316986306494421, guid: f24643effa5e841f68a4823663e3bfb9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9222678859448797810, guid: f24643effa5e841f68a4823663e3bfb9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -190,9 +218,11 @@ GameObject:
   - component: {fileID: 129645967}
   - component: {fileID: 129645971}
   - component: {fileID: 129645972}
-  m_Layer: 0
+  - component: {fileID: 129645973}
+  - component: {fileID: 129645974}
+  m_Layer: 3
   m_Name: HitDummy
-  m_TagString: HitDummy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -390,6 +420,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 100
   healthBarPrefab: {fileID: 116106719079590466, guid: 3d24a1be1f8fddc42979c13ddb7d0509, type: 3}
+--- !u!114 &129645973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129645966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5673b6d1e5d75244832fca5d6b74e03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  speed: 3
+  detectionRange: 10
+  loseTrackTime: 5
+--- !u!50 &129645974
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129645966}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &319426184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -441,6 +513,18 @@ PrefabInstance:
     - target: {fileID: 4671143313991138148, guid: 9f56837618bfb41f0a3c59be7cc82868, type: 3}
       propertyPath: m_Name
       value: VerticalRoomConnectors (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4671143313991138148, guid: 9f56837618bfb41f0a3c59be7cc82868, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6179423047165970443, guid: 9f56837618bfb41f0a3c59be7cc82868, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477188185577061046, guid: 9f56837618bfb41f0a3c59be7cc82868, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -913,6 +997,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: VerticalRoomConnectors (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4671143313991138148, guid: 9f56837618bfb41f0a3c59be7cc82868, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6179423047165970443, guid: 9f56837618bfb41f0a3c59be7cc82868, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477188185577061046, guid: 9f56837618bfb41f0a3c59be7cc82868, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1218,6 +1314,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 695942839846520885, guid: ebd4716c7bf47499f8aadbdb4cacf93d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2538556296863272969, guid: ebd4716c7bf47499f8aadbdb4cacf93d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27
@@ -1261,6 +1361,34 @@ PrefabInstance:
     - target: {fileID: 3291945606549219017, guid: ebd4716c7bf47499f8aadbdb4cacf93d, type: 3}
       propertyPath: m_Name
       value: EmptyRoomBlueprint(2 Open Long + 1 Short Side) (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3291945606549219017, guid: ebd4716c7bf47499f8aadbdb4cacf93d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4660085131690457511, guid: ebd4716c7bf47499f8aadbdb4cacf93d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833100499909385104, guid: ebd4716c7bf47499f8aadbdb4cacf93d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394775746642995018, guid: ebd4716c7bf47499f8aadbdb4cacf93d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6472859195862093859, guid: ebd4716c7bf47499f8aadbdb4cacf93d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6565458133453251751, guid: ebd4716c7bf47499f8aadbdb4cacf93d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048331049714743511, guid: ebd4716c7bf47499f8aadbdb4cacf93d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1318,6 +1446,18 @@ PrefabInstance:
     - target: {fileID: 1341206657069316286, guid: 0dc5d5544397e4d99bff84ecf2078d3f, type: 3}
       propertyPath: m_Name
       value: HorixontalRoomConnectors (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341206657069316286, guid: 0dc5d5544397e4d99bff84ecf2078d3f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435638925010750355, guid: 0dc5d5544397e4d99bff84ecf2078d3f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782721322323515000, guid: 0dc5d5544397e4d99bff84ecf2078d3f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1514,6 +1654,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorixontalRoomConnectors (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1341206657069316286, guid: 0dc5d5544397e4d99bff84ecf2078d3f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435638925010750355, guid: 0dc5d5544397e4d99bff84ecf2078d3f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782721322323515000, guid: 0dc5d5544397e4d99bff84ecf2078d3f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1571,6 +1723,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: VerticalRoomConnectors (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4671143313991138148, guid: 9f56837618bfb41f0a3c59be7cc82868, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6179423047165970443, guid: 9f56837618bfb41f0a3c59be7cc82868, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477188185577061046, guid: 9f56837618bfb41f0a3c59be7cc82868, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1627,6 +1791,18 @@ PrefabInstance:
     - target: {fileID: 4671143313991138148, guid: 9f56837618bfb41f0a3c59be7cc82868, type: 3}
       propertyPath: m_Name
       value: VerticalRoomConnectors (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4671143313991138148, guid: 9f56837618bfb41f0a3c59be7cc82868, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6179423047165970443, guid: 9f56837618bfb41f0a3c59be7cc82868, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477188185577061046, guid: 9f56837618bfb41f0a3c59be7cc82868, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1819,9 +1995,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -180
       objectReference: {fileID: 0}
+    - target: {fileID: 383914376372458287, guid: b49f265752c2940f89e9e2c2533d460b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 390614500650583878, guid: b49f265752c2940f89e9e2c2533d460b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1569133824634520159, guid: b49f265752c2940f89e9e2c2533d460b, type: 3}
       propertyPath: m_Name
       value: EmptyRoomBlueprint(2 Open Long Side)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1569133824634520159, guid: b49f265752c2940f89e9e2c2533d460b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426906473749824700, guid: b49f265752c2940f89e9e2c2533d460b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2580150191739244593, guid: b49f265752c2940f89e9e2c2533d460b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3256079264709052780, guid: b49f265752c2940f89e9e2c2533d460b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4279220649073574533, guid: b49f265752c2940f89e9e2c2533d460b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1901,7 +2105,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 0.16, y: 0.16}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1970,12 +2174,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: fac11097d3adb4424909b1c0910492d4, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 3fac268d69e62f2488ce44b07948d03c, type: 3}
   m_Color: {r: 0.21960784, g: 0.21960784, b: 0.8509804, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1988,9 +2192,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 981997926259916663, guid: 9e5e0efa234ef489684b05dc8171851d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3673527291942551455, guid: 9e5e0efa234ef489684b05dc8171851d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5504665186764152547, guid: 9e5e0efa234ef489684b05dc8171851d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988878159147995911, guid: 9e5e0efa234ef489684b05dc8171851d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6869068449682024683, guid: 9e5e0efa234ef489684b05dc8171851d, type: 3}
       propertyPath: m_Name
       value: EmptyRoomBlueprint(1 Open Long Side)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869068449682024683, guid: 9e5e0efa234ef489684b05dc8171851d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8297086526651776906, guid: 9e5e0efa234ef489684b05dc8171851d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2032,6 +2256,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9174533254331118703, guid: 9e5e0efa234ef489684b05dc8171851d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2051,6 +2279,7 @@ GameObject:
   - component: {fileID: 1505352735}
   - component: {fileID: 1505352734}
   - component: {fileID: 1505352737}
+  - component: {fileID: 1505352738}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2071,7 +2300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 10
-  hasKey: 0
+  hasKey: 1
 --- !u!212 &1505352732
 SpriteRenderer:
   serializedVersion: 2
@@ -2234,6 +2463,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MeleeAttackScript
   hitbox: {fileID: 1327946435}
   attackDuration: 0.2
+--- !u!114 &1505352738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505352730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de9419ea8418fbc48bbbd8dd209724a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
+  damage: 10
 --- !u!1001 &1616105414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2286,6 +2528,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: VerticalRoomConnectors (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4671143313991138148, guid: 9f56837618bfb41f0a3c59be7cc82868, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6179423047165970443, guid: 9f56837618bfb41f0a3c59be7cc82868, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477188185577061046, guid: 9f56837618bfb41f0a3c59be7cc82868, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2299,9 +2553,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 325086446225952704, guid: 59896d4c3e79e4c59bcb1b2c095911b7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1691586277982845135, guid: 59896d4c3e79e4c59bcb1b2c095911b7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026522083042316829, guid: 59896d4c3e79e4c59bcb1b2c095911b7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112281280438305007, guid: 59896d4c3e79e4c59bcb1b2c095911b7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4862420429094459980, guid: 59896d4c3e79e4c59bcb1b2c095911b7, type: 3}
       propertyPath: m_Name
       value: EmptyRoomBlueprint(1 Open Long + 2 Short Side)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862420429094459980, guid: 59896d4c3e79e4c59bcb1b2c095911b7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255437084110446074, guid: 59896d4c3e79e4c59bcb1b2c095911b7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7699919535470697433, guid: 59896d4c3e79e4c59bcb1b2c095911b7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043870806159423615, guid: 59896d4c3e79e4c59bcb1b2c095911b7, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9168264306060553717, guid: 59896d4c3e79e4c59bcb1b2c095911b7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2400,6 +2686,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: VerticalRoomConnectors (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4671143313991138148, guid: 9f56837618bfb41f0a3c59be7cc82868, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6179423047165970443, guid: 9f56837618bfb41f0a3c59be7cc82868, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477188185577061046, guid: 9f56837618bfb41f0a3c59be7cc82868, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2456,6 +2754,18 @@ PrefabInstance:
     - target: {fileID: 1341206657069316286, guid: 0dc5d5544397e4d99bff84ecf2078d3f, type: 3}
       propertyPath: m_Name
       value: HorixontalRoomConnectors (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341206657069316286, guid: 0dc5d5544397e4d99bff84ecf2078d3f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435638925010750355, guid: 0dc5d5544397e4d99bff84ecf2078d3f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782721322323515000, guid: 0dc5d5544397e4d99bff84ecf2078d3f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2668,9 +2978,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 981997926259916663, guid: 9e5e0efa234ef489684b05dc8171851d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3673527291942551455, guid: 9e5e0efa234ef489684b05dc8171851d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5504665186764152547, guid: 9e5e0efa234ef489684b05dc8171851d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988878159147995911, guid: 9e5e0efa234ef489684b05dc8171851d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6869068449682024683, guid: 9e5e0efa234ef489684b05dc8171851d, type: 3}
       propertyPath: m_Name
       value: EmptyRoomBlueprint(1 Open Long Side) (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869068449682024683, guid: 9e5e0efa234ef489684b05dc8171851d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8297086526651776906, guid: 9e5e0efa234ef489684b05dc8171851d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2712,6 +3042,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9174533254331118703, guid: 9e5e0efa234ef489684b05dc8171851d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2725,6 +3059,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 695942839846520885, guid: ebd4716c7bf47499f8aadbdb4cacf93d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2538556296863272969, guid: ebd4716c7bf47499f8aadbdb4cacf93d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 27.4
@@ -2769,6 +3107,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: EmptyRoomBlueprint(2 Open Long + 1 Short Side)
       objectReference: {fileID: 0}
+    - target: {fileID: 3291945606549219017, guid: ebd4716c7bf47499f8aadbdb4cacf93d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4660085131690457511, guid: ebd4716c7bf47499f8aadbdb4cacf93d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833100499909385104, guid: ebd4716c7bf47499f8aadbdb4cacf93d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394775746642995018, guid: ebd4716c7bf47499f8aadbdb4cacf93d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6472859195862093859, guid: ebd4716c7bf47499f8aadbdb4cacf93d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6565458133453251751, guid: ebd4716c7bf47499f8aadbdb4cacf93d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048331049714743511, guid: ebd4716c7bf47499f8aadbdb4cacf93d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2782,6 +3148,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 573186736931710149, guid: eb396e47d1fce4c1fbb23207b2180efb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174258611859953664, guid: eb396e47d1fce4c1fbb23207b2180efb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602232729636155581, guid: eb396e47d1fce4c1fbb23207b2180efb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3810225926023995253, guid: eb396e47d1fce4c1fbb23207b2180efb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 27.47
@@ -2822,9 +3200,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 4774772239264218765, guid: eb396e47d1fce4c1fbb23207b2180efb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4986055379638473421, guid: eb396e47d1fce4c1fbb23207b2180efb, type: 3}
       propertyPath: m_Name
       value: EmptyRoomBlueprint(1 Open Long + Short Side) (Second Variant)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4986055379638473421, guid: eb396e47d1fce4c1fbb23207b2180efb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902037602126642745, guid: eb396e47d1fce4c1fbb23207b2180efb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021821920018387782, guid: eb396e47d1fce4c1fbb23207b2180efb, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2839,9 +3233,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 471260742795122236, guid: d5157624383544edf807ad2d88621a35, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778179755473093391, guid: d5157624383544edf807ad2d88621a35, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2769488706141075482, guid: d5157624383544edf807ad2d88621a35, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2797793255739514715, guid: d5157624383544edf807ad2d88621a35, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3290460939453522465, guid: d5157624383544edf807ad2d88621a35, type: 3}
       propertyPath: m_Name
       value: EmptyRoomBlueprint(2 Open Long + 2 Short Side)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3290460939453522465, guid: d5157624383544edf807ad2d88621a35, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403331837424780917, guid: d5157624383544edf807ad2d88621a35, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694878790722621784, guid: d5157624383544edf807ad2d88621a35, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352765162556301251, guid: d5157624383544edf807ad2d88621a35, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6695312318086718167, guid: d5157624383544edf807ad2d88621a35, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2882,6 +3308,10 @@ PrefabInstance:
     - target: {fileID: 6695312318086718167, guid: d5157624383544edf807ad2d88621a35, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863856056508845966, guid: d5157624383544edf807ad2d88621a35, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2940,6 +3370,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: VerticalRoomConnectors
       objectReference: {fileID: 0}
+    - target: {fileID: 4671143313991138148, guid: 9f56837618bfb41f0a3c59be7cc82868, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6179423047165970443, guid: 9f56837618bfb41f0a3c59be7cc82868, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477188185577061046, guid: 9f56837618bfb41f0a3c59be7cc82868, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2996,6 +3438,18 @@ PrefabInstance:
     - target: {fileID: 1341206657069316286, guid: 0dc5d5544397e4d99bff84ecf2078d3f, type: 3}
       propertyPath: m_Name
       value: HorixontalRoomConnectors
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341206657069316286, guid: 0dc5d5544397e4d99bff84ecf2078d3f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435638925010750355, guid: 0dc5d5544397e4d99bff84ecf2078d3f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782721322323515000, guid: 0dc5d5544397e4d99bff84ecf2078d3f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
